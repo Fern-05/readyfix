@@ -147,9 +147,9 @@
       </div>
       <div id="bottom" class="slideshow" style="position: relative; max-height: 320px; width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
         <div id="slideframe" class="slide-frame" style="position:relative; height:320px; border-radius:10px; overflow:hidden;">
-          <img class="slide" src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=600" alt="Painting Fence" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <img class="slide" src="z-photos/annie-gray-WEWTGkPUVT0-unsplash.jpg" alt="Painting Fence" style="width:100%; height:100%; object-fit:cover; display:block;">
           <img class="slide" src="z-photos/jimmy-nilsson-masth-qX8sSnd7c_M-unsplash.jpg" alt="Handyman Tools" style="inset:0; width:100%; height:100%; object-fit:cover; display:none;">
-          <img class="slide" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600" alt="Installing Trim" style="inset:0; width:100%; height:100%; object-fit:cover; display:none;">
+          <img class="slide" src="z-photos/greyson-joralemon-A1g0oeX29ec-unsplash.jpg" alt="Installing Trim" style="inset:0; width:100%; height:100%; object-fit:cover; display:none;">
         </div>
 
         <button class="slideshow-prev" aria-label="Previous" style="position:absolute; left:6px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:none; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer;">‹</button>
@@ -299,7 +299,7 @@
       margin: 0 auto;
     ">
       <h3>Contact us</h3>
-      <div style="
+      <div id="name" style="
        display: flex;
        flex-direction: column;
        width: 100%;
@@ -320,11 +320,71 @@
         ">
       </div>
 
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="johnsmith@gmail.com">
-      <label for="message">Message</label>
-      <input id="message" type="text" placeholder="How can we help you?">
-      <button type="button">Send</button>
+      <div id="email" style="
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       gap: 2px ;
+       margin-bottom: 12px;
+      "
+      >
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="johnsmith@gmail.com" style="
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 40px;
+        border: 1px solid #d0d0d0;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        max-width: 100%;
+        ">
+      </div>
+
+      <div id="Address" style="
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       gap: 2px ;
+       margin-bottom: 12px;
+      "
+      >
+        <label for="address">Address</label>
+        <input id="address" type="address" placeholder="Address" style="
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 40px;
+        border: 1px solid #d0d0d0;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        max-width: 100%;
+        ">
+      </div>
+
+      <div id="message" style="
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       gap: 2px ;
+       margin-bottom: 12px;
+      "
+      >
+        <label for="message">Message</label>
+        <input id="messsage" type="text" placeholder="How can we help you" style="
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 120px;
+        border: 1px solid #d0d0d0;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        max-width: 100%;
+        ">
+      </div>
+
+      <button class="button" type="button">Send</button>
+
     </div>
   </section>
 
@@ -332,39 +392,29 @@
     <div class="footer-top">
       <div>
         <h2>ReadyFix</h2>
-        <p>HANDYMAN SERVICES<br>Empowering users to create applications.</p>
+        <p>HANDYMAN SERVICES</p>
       </div>
       <div>
-        <h4>Products</h4>
+        <h4>Pages</h4>
         <ul>
-          <li><a href="#">Marketing</a></li>
-          <li><a href="#">Sales Solution</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">Data</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">APIs</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">News</a></li>
         </ul>
       </div>
       <div>
-        <h4>Legal</h4>
+        <h4>Service Area</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms</a></li>
+          <li>Toronto, ON</li>
+          <li>Scarborough, ON</li>
+          <li>Markham, ON</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Phone: <a href="tel:6476994607">647-699-4607</a></li>
+          <li>Email: <a href="mailto:braydon@readyfix.ca">braydon@readyfix.ca</a></li>
         </ul>
       </div>
     </div>
@@ -379,10 +429,10 @@
   "@context": "https://schema.org",
   "@type": "Handyman",
   "name": "ReadyFix Handyman Services",
-  "image": "https://readyfix-inky.vercel.app/og-cover.jpg",
+  "image": "z-photos/ReadyFix Handyman Logo.png",
   "url": "https://readyfix.ca",
   "telephone": "+1-647-699-4607",
-  "areaServed": "Toronto, ON",
+  "areaServed": "Toronto, ON", "Scarborough, ON", "Markham, ON",  
   "priceRange": "$$",
   "openingHours": "Mo-Fr 08:00-18:00",
   "address": {
@@ -392,7 +442,7 @@
     "addressCountry": "CA"
   },
   "sameAs": [
-    "https://www.instagram.com/yourhandle",
+    "https://www.instagram.com/readyfix.ca/",
     "https://www.facebook.com/yourpage",
     "https://g.page/your-gmb"
   ]
