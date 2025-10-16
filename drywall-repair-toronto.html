@@ -124,84 +124,29 @@
   ">
     <div id="innercontainer" style="
       display: flex; 
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: center; 
-      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap; 
+      align-items: center;
+      justify-content: space-between;
       gap: 32px;
       min-width: 320px;
-      max-width: 800px;
+      max-width: 992px;
       width: 100%;
       ">
 
-      <div id="top" style="
+      <div id="left" style="
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 24px;
-        min-width: 320px;
+        flex: 1 1 320px;
       ">
-        <h2>Drywall Repair & Patching</h2>
+        <h1 style="text-align: left;">Drywall Repair & Patching Toronto</h1>
         <p>Quick, reliable home solutions - your trusted Toronto handyman.</p>
         <button class="button" onclick="location.href='tel:6476994607'">647-699-4607</button>
       </div>
-      <div id="bottom" class="slideshow" style="position: relative; max-height: 320px; width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-        <div id="slideframe" class="slide-frame" style="position:relative; height:320px; border-radius:10px; overflow:hidden;">
-          <img class="slide" src="z-photos/annie-gray-WEWTGkPUVT0-unsplash.jpg" alt="Painting Fence" style="width:100%; height:100%; object-fit:cover; display:block;">
-          <img class="slide" src="z-photos/jimmy-nilsson-masth-qX8sSnd7c_M-unsplash.jpg" alt="Handyman Tools" style="inset:0; width:100%; height:100%; object-fit:cover; display:none;">
-          <img class="slide" src="z-photos/greyson-joralemon-A1g0oeX29ec-unsplash.jpg" alt="Installing Trim" style="inset:0; width:100%; height:100%; object-fit:cover; display:none;">
-        </div>
-
-        <button class="slideshow-prev" aria-label="Previous" style="position:absolute; left:6px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:none; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer;">‹</button>
-        <button class="slideshow-next" aria-label="Next" style="position:absolute; right:6px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:none; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer;">›</button>
-
-        <div class="slideshow-dots" style="position:absolute; left:50%; transform:translateX(-50%); bottom:8px; display:flex; gap:6px;">
-          <button class="slideshow-dot" data-index="0" aria-label="Slide 1" style="width:8px; height:8px; border-radius:50%; border:none; background:#fff; opacity:0.85;"></button>
-          <button class="slideshow-dot" data-index="1" aria-label="Slide 2" style="width:8px; height:8px; border-radius:50%; border:none; background:#fff; opacity:0.45;"></button>
-          <button class="slideshow-dot" data-index="2" aria-label="Slide 3" style="width:8px; height:8px; border-radius:50%; border:none; background:#fff; opacity:0.45;"></button>
-        </div>
-      </div>
-
-      <script>
-      (function(){
-        const container = document.currentScript.previousElementSibling; // the slideshow div
-        const slides = container.querySelectorAll('.slide');
-        const prevBtn = container.querySelector('.slideshow-prev');
-        const nextBtn = container.querySelector('.slideshow-next');
-        const dots = container.querySelectorAll('.slideshow-dot');
-        let index = 0;
-        let interval = null;
-        const delay = 3500;
-
-        function show(i){
-          index = (i + slides.length) % slides.length;
-          slides.forEach((s, idx) => s.style.display = idx === index ? 'block' : 'none');
-          dots.forEach((d, idx) => d.style.opacity = idx === index ? '0.95' : '0.45');
-        }
-
-        function next(){ show(index + 1); }
-        function prev(){ show(index - 1); }
-
-        nextBtn.addEventListener('click', () => { next(); resetInterval(); });
-        prevBtn.addEventListener('click', () => { prev(); resetInterval(); });
-        dots.forEach(d => d.addEventListener('click', (e) => {
-          show(parseInt(e.currentTarget.dataset.index, 10));
-          resetInterval();
-        }));
-
-        function startInterval(){ interval = setInterval(next, delay); }
-        function stopInterval(){ if(interval) { clearInterval(interval); interval = null; } }
-        function resetInterval(){ stopInterval(); startInterval(); }
-
-        container.addEventListener('mouseenter', stopInterval);
-        container.addEventListener('mouseleave', startInterval);
-
-        // Init
-        show(0);
-        startInterval();
-      })();
-      </script>
-    </div>
+      <img id="right" src="z-photos/annie-gray-WEWTGkPUVT0-unsplash.jpg" alt="Painting Fence" style="flex-basis: 320px; flex-grow: 1; height:250px; object-fit:cover; display:block;">
+      
   </section>
 
   
@@ -209,10 +154,10 @@
   
   
   
-  <section id="services" 
+  <section id="why-choose-us" 
   style="
   background-color: #fbfbfb; 
-  max-width:auto; width:100%; 
+  max-width:auto;
   padding-top:72px;
   padding-bottom:72px; 
   padding-left: 24px;
@@ -223,20 +168,68 @@
   align-items:center;
   justify-content:center;
   ">
-    <div style="max-width:800px">
-      <h3>Our Services</h3>
-      <p>At ReadyFix Handyman Services, we specialize in quick, high-quality home repairs across Toronto from drywall patching and painting touch-ups to door, trim, and shelf installations. No job too small, we’re your go-to for fast, professional results.</p>
-      <div class="service-list">
-        <div class="service-item"><div class="icon"></div><a href="drywall.html">Drywall Repair &amp; Patching</a></div>
-        <div class="service-item"><div class="icon"></div><a href="fence.html">Fence &amp; Deck Repair</a></div>
-        <div class="service-item"><div class="icon"></div><a href="door.html">Door Hardware</a></div>
-        <div class="service-item"><div class="icon"></div><a href="painting.html">Painting Touch Ups</a></div>
-        <div class="service-item"><div class="icon"></div><a href="caulking.html">Caulking &amp; Sealing</a></div>
-        <div class="service-item"><div class="icon"></div><a href="tv.html">TV Mounting</a></div>
-        <div class="service-item"><div class="icon"></div><a href="shelves.html">Floating Shelves</a></div>
-        <div class="service-item"><div class="icon"></div><a href="trim.html">Door &amp; Trim Repair</a></div>
-        <div class="service-item"><div class="icon"></div><a href="misc.html">Misc. Installations</a></div>
-      </div>
+    <div id="inner-why-choose-us" style="width:100%; max-width:992px;">
+      <h2 style="margin-bottom: 16px; text-align: left;">Why Choose ReadyFix for Drywall Repairs</h2>
+      <p style="margin-bottom: 32px;">Drywall damage happens - from door handles, plumbing work, or water leaks. ReadyFix Handyman Services provides quick, professional drywall repair and patching throughout Toronto. We restore your walls to a perfect finish without the mess or wait times of big renovation crews.</p>
+      <div id="bullet-list">
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">🧰 Skilled workmanship, clean seams and invisible patches</p>
+        </div>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">⏱️ Same-day service for urgent repairs</p>
+        </div>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">💡 Expert advice on materials, finishes, and paint matching</p>
+        </div>
+    </div> 
+        
+  </section>
+
+
+
+
+<section id="common-examples" 
+  style="
+  background-color: #ffffff;
+  max-width:auto;
+  padding-top:72px;
+  padding-bottom:72px; 
+  padding-left: 24px;
+  padding-right: 24px;
+  display:flex; 
+  flex-direction:column; 
+  align-items:center;
+  justify-content:center;
+  ">
+    <div id="inner-common" style="width:100%; max-width: 992px; gap: 0px;">
+      <h2 style="margin-bottom: 32px; text-align: left;">Common Drywall Repairs We Handle</h2>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease; "></div>
+            <p style="display: flex;  flex: 1 0 320px;">Small holes and dents</p>
+        </div>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">Cracks and popped screws</p>
+        </div>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">Water damage & stain repair</p>
+        </div>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">Seam re-taping</p>
+        </div>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">Ceiling patching</p>
+        </div>
+        <div style="display: flex;  flex-direction: row;  align-content: center; justify-content: center; flex: 1 1 auto; margin-bottom: 6px;">
+            <div style="width: 12px; height: 12px; margin-top: 3px; margin-right: 8px; border-radius: 50%; background-color: #111; transition: background-color 0.3s ease;"></div>
+            <p style="display: flex;  flex: 1 0 320px;">Textured finish repair</p>
+        </div>
     </div>
   </section>
 
@@ -247,7 +240,7 @@
   
   <section id="pricing"
   style="
-  background-color: #ffffff;
+  background-color: #fbfbfb;
    max-width: 100%;
    padding-top:72px;
    padding-bottom:72px;
@@ -260,11 +253,13 @@
    justify-content:center;
   "
   >
-    <h3>Pricing</h3>
-    <p>$25 - Visitation Fee (No work done)</p>
-    <p>$150 + materials - 2-hour minimum</p>
-    <p>$290 + materials - Half-day</p>
-    <p>$550 + materials - Full-day</p>
+    <div id="inner-pricing" style="width:100%; max-width: 992px; ">
+      <h2 style="margin-bottom: 32px;">Pricing</h2>
+      <p>$25 - Visitation Fee (No work done)</p>
+      <p>$150 + materials - 2-hour minimum</p>
+      <p>$290 + materials - Half-day</p>
+      <p>$550 + materials - Full-day</p>
+    </div>
   </section>
 
   
@@ -286,7 +281,7 @@
     <div id="contact-form" 
     style="
       width: 100%;
-      max-width: 800px;
+      max-width: 992px;
       box-sizing: border-box;
       background-color: #ffffff;
       border: 1px solid #d0d0d0;
