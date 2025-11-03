@@ -282,7 +282,7 @@
     justify-content: center;
     padding: 72px 24px;
     gap: 16px;
-  ">
+   ">
     <div id="contact-form" 
     style="
       width: 100%;
@@ -299,91 +299,88 @@
       margin: 0 auto;
     ">
       <h3>Contact us</h3>
-      <div id="name" style="
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-       gap: 2px ;
-       margin-bottom: 12px;
-      "
-      >
-        <label for="name">Full name</label>
-        <input id="name" type="text" placeholder="John Smith" style="
-        padding-left: 16px;
-        padding-right: 16px;
-        height: 40px;
-        border: 1px solid #d0d0d0;
-        border-radius: 5px;
-        font-size: 16px;
-        font-family: 'Inter', sans-serif;
-        max-width: 100%;
+      <form action="mailto:braydon@readyfix.ca" method="POST" enctype="text/plain">
+        <div id="name" style="
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         gap: 2px ;
+         margin-bottom: 12px;
         ">
-      </div>
+          <label for="name">Full name</label>
+          <input name="name" id="name" type="text" placeholder="John Smith" required style="
+          padding-left: 16px;
+          padding-right: 16px;
+          height: 40px;
+          border: 1px solid #d0d0d0;
+          border-radius: 5px;
+          font-size: 16px;
+          font-family: 'Inter', sans-serif;
+          max-width: 100%;
+          ">
+        </div>
 
-      <div id="email" style="
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-       gap: 2px ;
-       margin-bottom: 12px;
-      "
-      >
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="johnsmith@gmail.com" style="
-        padding-left: 16px;
-        padding-right: 16px;
-        height: 40px;
-        border: 1px solid #d0d0d0;
-        border-radius: 5px;
-        font-size: 16px;
-        font-family: 'Inter', sans-serif;
-        max-width: 100%;
+        <div id="email" style="
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         gap: 2px ;
+         margin-bottom: 12px;
         ">
-      </div>
+          <label for="email">Email</label>
+          <input name="email" id="email" type="email" placeholder="johnsmith@gmail.com" required style="
+          padding-left: 16px;
+          padding-right: 16px;
+          height: 40px;
+          border: 1px solid #d0d0d0;
+          border-radius: 5px;
+          font-size: 16px;
+          font-family: 'Inter', sans-serif;
+          max-width: 100%;
+          ">
+        </div>
 
-      <div id="Address" style="
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-       gap: 2px ;
-       margin-bottom: 12px;
-      "
-      >
-        <label for="address">Address</label>
-        <input id="address" type="address" placeholder="Address" style="
-        padding-left: 16px;
-        padding-right: 16px;
-        height: 40px;
-        border: 1px solid #d0d0d0;
-        border-radius: 5px;
-        font-size: 16px;
-        font-family: 'Inter', sans-serif;
-        max-width: 100%;
+        <div id="Address" style="
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         gap: 2px ;
+         margin-bottom: 12px;
         ">
-      </div>
+          <label for="address">Address</label>
+          <input name="address" id="address" type="text" placeholder="Address" required style="
+          padding-left: 16px;
+          padding-right: 16px;
+          height: 40px;
+          border: 1px solid #d0d0d0;
+          border-radius: 5px;
+          font-size: 16px;
+          font-family: 'Inter', sans-serif;
+          max-width: 100%;
+          ">
+        </div>
 
-      <div id="message" style="
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-       gap: 2px ;
-       margin-bottom: 12px;
-      "
-      >
-        <label for="message">Message</label>
-        <input id="messsage" type="text" placeholder="How can we help you" style="
-        padding-left: 16px;
-        padding-right: 16px;
-        height: 120px;
-        border: 1px solid #d0d0d0;
-        border-radius: 5px;
-        font-size: 16px;
-        font-family: 'Inter', sans-serif;
-        max-width: 100%;
+        <div id="message" style="
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         gap: 2px ;
+         margin-bottom: 12px;
         ">
-      </div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="How can we help you" required style="
+          padding: 16px;
+          height: 120px;
+          border: 1px solid #d0d0d0;
+          border-radius: 5px;
+          font-size: 16px;
+          font-family: 'Inter', sans-serif;
+          max-width: 100%;
+          "></textarea>
+        </div>
 
-      <button class="button" type="button">Send</button>
+        <button class="button" type="submit">Send</button>
+      </form>
 
     </div>
   </section>
