@@ -300,89 +300,105 @@
       align-items: stretch;
       margin: 0 auto;
     ">
+      
+      
       <h3>Contact us</h3>
-      <form action="mailto:braydon@readyfix.ca" method="POST" enctype="text/plain">
-        <div id="name" style="
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         gap: 2px ;
-         margin-bottom: 12px;
-        ">
-          <label for="name">Full name</label>
-          <input name="name" id="name" type="text" placeholder="John Smith" required style="
-          padding-left: 16px;
-          padding-right: 16px;
-          height: 40px;
-          border: 1px solid #d0d0d0;
-          border-radius: 5px;
-          font-size: 16px;
-          font-family: 'Inter', sans-serif;
-          max-width: 100%;
-          ">
-        </div>
 
-        <div id="email" style="
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         gap: 2px ;
-         margin-bottom: 12px;
-        ">
-          <label for="email">Email</label>
-          <input name="email" id="email" type="email" placeholder="johnsmith@gmail.com" required style="
-          padding-left: 16px;
-          padding-right: 16px;
-          height: 40px;
-          border: 1px solid #d0d0d0;
-          border-radius: 5px;
-          font-size: 16px;
-          font-family: 'Inter', sans-serif;
-          max-width: 100%;
-          ">
-        </div>
 
-        <div id="Address" style="
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         gap: 2px ;
-         margin-bottom: 12px;
-        ">
-          <label for="address">Address</label>
-          <input name="address" id="address" type="text" placeholder="Address" required style="
-          padding-left: 16px;
-          padding-right: 16px;
-          height: 40px;
-          border: 1px solid #d0d0d0;
-          border-radius: 5px;
-          font-size: 16px;
-          font-family: 'Inter', sans-serif;
-          max-width: 100%;
-          ">
-        </div>
 
-        <div id="message" style="
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         gap: 2px ;
-         margin-bottom: 12px;
-        ">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" placeholder="How can we help you" required style="
-          padding: 16px;
-          height: 120px;
-          border: 1px solid #d0d0d0;
-          border-radius: 5px;
-          font-size: 16px;
-          font-family: 'Inter', sans-serif;
-          max-width: 100%;
-          "></textarea>
-        </div>
-
-        <button class="button" type="submit">Send</button>
-      </form>
+<form
+  action="https://formspree.io/f/xrbowkdd"
+  class="fs-form fs-layout__2-column"
+  target="_top"
+  method="POST"
+>
+  <fieldset>
+    <legend class="fs-fieldset-title">Contact Information</legend>
+    <div class="fs-field">
+      <label class="fs-label" for="requestor-name">Name</label>
+      <input
+        class="fs-input"
+        id="requestor-name"
+        name="requestor-name"
+        placeholder="Enter your full name"
+        required
+      />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="email-address">Email Address</label>
+      <input
+        class="fs-input"
+        id="email-address"
+        name="email-address"
+        placeholder="Enter your email address"
+        required
+      />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="phone-number">Phone Number</label>
+      <input
+        class="fs-input"
+        id="phone-number"
+        name="phone-number"
+        placeholder="Enter your phone number"
+        required
+      />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="unit-number">Address / Location</label>
+      <input
+        class="fs-input"
+        id="unit-number"
+        name="unit-number"
+        placeholder="Enter your location or unit number"
+        required
+      />
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend class="fs-fieldset-title">Maintenance Issue Details</legend>
+    <div class="fs-field col-span-full">
+      <label class="fs-label" for="maintenance-type">
+        Type of Maintenance Issue
+      </label>
+      <select
+        class="fs-select"
+        id="maintenance-type"
+        name="maintenance-type"
+        required
+      >
+        <option value="general-repair">General Repair</option>
+        <option value="cabinet-repair">Cabinet Repair</option>
+        <option value="drywall">Drywall</option>
+        <option value="painting">Painting</option>
+        <option value="carpentry">Carpentry</option>
+        <option value="furniture-assembly">Furniture Assembly</option>
+        <option value="tv-mounting">TV Mounting</option>
+        <option value="shelving">Shelving</option>
+        <option value="door-trim">Door & Trim</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="electrical">Electrical</option>
+        <option value="appliance">Appliance</option>
+        
+      </select>
+    </div>
+    <div class="fs-field col-span-full">
+      <label class="fs-label" for="problem-description">
+        Description of the Problem
+      </label>
+      <textarea
+        class="fs-textarea"
+        id="problem-description"
+        name="problem-description"
+        placeholder="Describe the issue in detail"
+        required
+      ></textarea>
+    </div>
+  </fieldset>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Submit</button>
+  </div>
+</form>
 
     </div>
   </section>
