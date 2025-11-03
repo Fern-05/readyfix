@@ -359,6 +359,13 @@
 
       <form id="form-content" action="https://formspree.io/f/xrbowkdd" class="fs-form fs-layout__2-column" target="_top"
         method="POST">
+        <!-- Spam honeypot (kept empty by humans) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        
+        <!-- Optional: subject line that you'll see in your inbox -->
+        <input type="hidden" name="_subject" value="Ready-Fix Lead">
+
+
         <fieldset id="contact-info">
           <legend class="fs-fieldset-title">Contact Information</legend>
           <div class="fs-field">
