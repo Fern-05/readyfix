@@ -1,0 +1,12 @@
+﻿{
+  "name": "ReadyFix Handyman Services",
+  "short_name": "ReadyFix",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e03131",
+  "icons": [
+    {"src": "/favicon-32.png", "sizes": "32x32", "type": "image/png"},
+    {"src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}
