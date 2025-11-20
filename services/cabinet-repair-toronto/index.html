@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="utf-8">
@@ -32,7 +32,8 @@
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle__bar"></span></button>
         <ul id="nav-menu">
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
+          <li><a href="/before-after/">Before &amp; After</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
           <li><a href="/">Home</a></li>
         </ul>
@@ -46,7 +47,7 @@
       <div class="section-inner">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li aria-current="page">Cabinet repair</li>
         </ol>
       </div>
@@ -79,10 +80,40 @@
           <h2>Why homeowners choose ReadyFix</h2>
           <p>We protect counters and floors, verify stud and anchor points, and supply trusted hardware brands. You get smooth action and clean lines without a full kitchen reno.</p>
           <ul class="badges">
-            <li>Licensed &amp; insured</li>
+            <li>On-time arrival windows</li>
             <li>Dust control &amp; clean work zones</li>
-            <li>2-year workmanship warranty</li>
+            <li>Photo updates &amp; tidy cleanup</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-gallery" aria-labelledby="cabinet-gallery">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="cabinet-gallery">Cabinet repair results</h2>
+          <p>Quick looks at tuned hinges, aligned drawers, and refreshed hardware.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="/images/cabinet1.jpg" alt="Before photo of a sagging cabinet door">
+            <h3>Door re-hang</h3>
+            <p>Customer had a sagging upper door. We reset hinges, added soft-close, and aligned the reveal.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/cabinet2.jpg" alt="Misaligned drawer before repair">
+            <h3>Drawer slide swap</h3>
+            <p>Grinding slides replaced with smooth soft-close hardware in under an hour.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/cabinet3.jpg" alt="Old cabinet hardware before upgrade">
+            <h3>Hardware refresh</h3>
+            <p>Updated pulls and knobs drilled cleanly to match the client’s new finish.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
         </div>
       </div>
     </section>
@@ -90,11 +121,11 @@
     <section class="faq" aria-labelledby="cabinet-faq">
       <div class="section-inner">
         <h2 id="cabinet-faq">Cabinet repair FAQs</h2>
-        <details open>
+        <details open style="margin-bottom: 12px;">
           <summary>Can you match existing handles and finishes?</summary>
           <p>Yes. We source or install hardware you provide and match finish and drill patterns to avoid visible holes.</p>
         </details>
-        <details>
+        <details style="margin-bottom: 12px;">
           <summary>Do you install soft-close hinges and slides?</summary>
           <p>We upgrade most cabinet lines with soft-close hardware and adjust doors for even reveals.</p>
         </details>
@@ -169,7 +200,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
         </ul>
       </div>
@@ -191,3 +222,4 @@
   </div>
 </body>
 </html>
+

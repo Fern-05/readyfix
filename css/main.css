@@ -18,7 +18,8 @@ body {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
   background: #fff;
-  line-height: 1.6;
+  line-height: 1.65;
+  font-size: 16px;
 }
 
 a {
@@ -42,13 +43,17 @@ p {
 }
 
 h1, h2, h3, h4 {
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 750;
+  line-height: 1.25;
   margin: 0 0 0.8rem;
 }
 
 main section {
   padding: 4rem 1.5rem;
+}
+
+.section-compact {
+  padding: 2.5rem 1.5rem;
 }
 
 .section-inner {
@@ -95,6 +100,11 @@ main section {
   gap: 1rem;
 }
 
+.site-header__inner .btn--ghost {
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -137,7 +147,8 @@ main section {
 
 .primary-nav a {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 650;
+  font-size: 1rem;
   color: var(--text);
 }
 
@@ -186,14 +197,20 @@ main section {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.85rem 1.6rem;
-  font-weight: 600;
+  padding: 1rem 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   border: none;
   cursor: pointer;
   background: var(--red);
   color: #fff;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn--small {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
 }
 
 .btn:hover,
@@ -223,6 +240,7 @@ main section {
 
 .hero {
   padding-bottom: 3rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7f5 55%, #f1f5f9 100%);
 }
 
 .hero__inner {
@@ -262,13 +280,93 @@ main section {
 .hero__media img {
   width: 100%;
   border-radius: var(--radius);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.16);
+}
+
+/* Proof / galleries */
+.proof {
+  background: #fff;
+}
+
+.proof__grid,
+.before-after-grid,
+.gallery-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.proof-card,
+.gallery-card {
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 1.25rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.proof-card h3,
+.gallery-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.proof-card p,
+.gallery-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.proof-card .cta-inline,
+.gallery-card .cta-inline {
+  font-weight: 650;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.ba-slider {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #f5f5f5;
+}
+
+.ba-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ba-slider img.after {
+  clip-path: polygon(0 0, var(--ba-pos, 50%) 0, var(--ba-pos, 50%) 100%, 0 100%);
+}
+
+.ba-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--ba-pos, 50%);
+  width: 2px;
+  background: rgba(224, 49, 49, 0.4);
+}
+
+.ba-slider input[type="range"] {
+  position: absolute;
+  inset: auto 1rem 1rem 1rem;
+  width: calc(100% - 2rem);
+  accent-color: var(--red);
 }
 
 .eyebrow {
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 0.8rem;
 }
@@ -286,6 +384,9 @@ main section {
   margin-left: auto;
   margin-right: auto;
 }
+.service-grid .section-heading h2 {
+  margin-bottom: 0.4rem;
+}
 
 .service-grid ul {
   display: grid;
@@ -300,12 +401,13 @@ main section {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1.5rem;
-  border: 1px solid #e4e4e4;
+  padding: 1.65rem;
+  border: 1.5px solid #e4e4e4;
   border-radius: var(--radius);
   text-decoration: none;
   background: #fff;
   transition: border-color 0.2s ease, color 0.2s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
   width: 100%;
 }
 
@@ -316,7 +418,7 @@ main section {
   min-width: 48px;
   min-height: 48px;
   border-radius: 50%;
-  background: var(--bg);
+  background: #f1f5f9;
   display: grid;
   place-items: center;
   font-size: 1.45rem;
@@ -367,6 +469,7 @@ main section {
   border: 1px solid #e5e5e5;
   border-radius: var(--radius);
   background: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
 }
 
 .process ol {
@@ -381,10 +484,33 @@ main section {
   border-radius: var(--radius);
   background: #fff;
   position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
 }
 
 .process li h3 {
   margin-top: 0.3rem;
+}
+
+.pill-row {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: stretch;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+.pill strong {
+  font-weight: 700;
 }
 
 .cta-band {
@@ -444,14 +570,15 @@ main section {
   border-radius: var(--radius);
   border: 1px solid #e5e5e5;
   background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.75rem;
-  border-radius: 0.4rem;
-  border: 1px solid #cfcfcf;
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid #cfcfcf;
   font: inherit;
 }
 
@@ -539,13 +666,15 @@ main section {
 }
 
 .breadcrumbs {
-  padding: 0 1.5rem;
-  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  margin: 0 auto 1rem;
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .breadcrumbs ol {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
   font-size: 0.9rem;
 }
@@ -580,12 +709,26 @@ main section {
   border-radius: var(--radius);
   text-decoration: none;
   color: inherit;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
 }
 
 .service-card:hover,
 .service-card:focus-visible {
   border-color: var(--red);
   text-decoration: underline;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.service-gallery {
+  background: var(--bg);
+}
+
+.service-gallery .section-heading {
+  margin-bottom: 1rem;
+}
+
+.gallery-card .btn {
+  width: fit-content;
 }
 
 .faq details {

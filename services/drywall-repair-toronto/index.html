@@ -64,7 +64,8 @@
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle__bar"></span></button>
         <ul id="nav-menu">
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
+          <li><a href="/before-after/">Before &amp; After</a></li>
           <li><a href="/services/drywall-repair-toronto/" aria-current="page">Drywall repair</a></li>
           <li><a href="/">Home</a></li>
         </ul>
@@ -78,7 +79,7 @@
       <div class="section-inner">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li aria-current="page">Drywall repair &amp; patching</li>
         </ol>
       </div>
@@ -111,10 +112,40 @@
           <h2>Why Toronto homeowners choose ReadyFix</h2>
           <p>We show up with HEPA vacuums, floor protection, portable lights, and quick-set compounds. That means less disruption for condos and faster drying times for tight schedules.</p>
           <ul class="badges">
-            <li>Licensed &amp; insured</li>
+            <li>On-time arrival windows</li>
             <li>Clean zones &amp; dust control</li>
-            <li>2-year workmanship warranty</li>
+            <li>Photo updates &amp; tidy cleanup</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-gallery" aria-labelledby="drywall-gallery">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="drywall-gallery">Drywall transformations</h2>
+          <p>From access holes to textured ceilings, here’s what a clean patch looks like.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="/images/drywall1.jpg" alt="Drywall hole before repair">
+            <h3>Ceiling access patch</h3>
+            <p>We closed a 12x12 access cut, taped, skimmed, and sanded for a painter-ready finish.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/drywall2.jpg" alt="Wall seam cracking before repair">
+            <h3>Cracked seam repair</h3>
+            <p>Opened the joint, retaped, and feathered to blend with existing orange peel texture.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/drywall3.jpg" alt="Water damaged drywall before patch">
+            <h3>Water stain remediation</h3>
+            <p>Cut out wet section, replaced board, skimmed, and primed for a clean repaint.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
         </div>
       </div>
     </section>
@@ -205,7 +236,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li><a href="/services/drywall-repair-toronto/" aria-current="page">Drywall repair</a></li>
         </ul>
       </div>
@@ -227,3 +258,4 @@
   </div>
 </body>
 </html>
+

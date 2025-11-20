@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
   <meta property="og:locale" content="en_CA">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Small Jobs Handyman | ReadyFix Toronto">
-  <meta property="og:description" content="Small handyman tasks completed fast—adjustments, touch-ups, and repairs in one visit.">
+  <meta property="og:description" content="Small handyman tasks completed fastâ€”adjustments, touch-ups, and repairs in one visit.">
   <meta property="og:url" content="https://readyfix.ca/services/small-jobs/">
   <meta property="og:image" content="https://readyfix.ca/img/og-image.jpg">
   <link rel="stylesheet" href="/css/main.css">
@@ -32,7 +32,8 @@
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle__bar"></span></button>
         <ul id="nav-menu">
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
+          <li><a href="/before-after/">Before &amp; After</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
           <li><a href="/">Home</a></li>
         </ul>
@@ -46,7 +47,7 @@
       <div class="section-inner">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li aria-current="page">Various small jobs</li>
         </ol>
       </div>
@@ -79,10 +80,40 @@
           <h2>Why it works</h2>
           <p>We bundle multiple tasks into a single visit with transparent minimums. You get clear communication and tidy work so nothing lingers.</p>
           <ul class="badges">
-            <li>Licensed &amp; insured</li>
+            <li>On-time arrival windows</li>
             <li>Flexible scheduling</li>
-            <li>2-year workmanship warranty</li>
+            <li>Photo updates &amp; tidy cleanup</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-gallery" aria-labelledby="small-gallery">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="small-gallery">Small jobs, big impact</h2>
+          <p>Quick fixes bundled into efficient visits.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="/images/small1.jpg" alt="Loose handle before tightening">
+            <h3>Handle + hardware fixes</h3>
+            <p>Loose handles tightened, stripped screws replaced, and finishes matched across a kitchen.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/small2.jpg" alt="Minor wall patch before repair">
+            <h3>Minor wall touch-ups</h3>
+            <p>Patched small dents and nail pops, sanded, and primed for quick repainting.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/small3.jpg" alt="Closet door before alignment">
+            <h3>Closet door alignment</h3>
+            <p>Bi-fold doors adjusted to glide smoothly and close evenly.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
         </div>
       </div>
     </section>
@@ -100,7 +131,7 @@
         </details>
         <details>
           <summary>Can you add jobs on site?</summary>
-          <p>Often yes if time allows; we’ll confirm any additional cost before proceeding.</p>
+          <p>Often yes if time allows; weâ€™ll confirm any additional cost before proceeding.</p>
         </details>
       </div>
     </section>
@@ -138,7 +169,7 @@
         <div>
           <p class="eyebrow">Contact</p>
           <h2 id="contact-title">Ready for quick fixes?</h2>
-          <p>Share your list and photos. We’ll reply with timing and a clear quote.</p>
+          <p>Share your list and photos. Weâ€™ll reply with timing and a clear quote.</p>
         </div>
         <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrbowkdd" method="POST" data-track="cta:form_submit">
           <input type="hidden" name="_redirect" value="/thanks.html">
@@ -169,7 +200,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
         </ul>
       </div>
@@ -191,3 +222,4 @@
   </div>
 </body>
 </html>
+

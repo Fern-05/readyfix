@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReadyFix Handyman | Trusted Toronto Repairs</title>
+  <title>Ready Fix Handyman | Trusted Toronto Repairs</title>
   <meta name="description" content="Ready Fix Handyman tackles drywall, carpentry, and punch-list repairs anywhere in Toronto & the GTA. Call 647-699-4607 for fast, insured help.">
   <link rel="canonical" href="https://readyfix.ca/">
   <meta property="og:locale" content="en_CA">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ready Fix Handyman | Trusted Toronto Repairs">
-  <meta property="og:description" content="Same-week drywall & handyman repairs in Toronto. Call 647-699-4607.">
+  <meta property="og:description" content="Same-week handyman repairs in Toronto. Call 647-699-4607.">
   <meta property="og:url" content="https://readyfix.ca/">
   <meta property="og:site_name" content="Ready Fix Handyman Services">
   <meta property="og:image" content="https://readyfix.ca/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ready Fix Handyman | Trusted Toronto Repairs">
-  <meta name="twitter:description" content="Local handyman for drywall, trim, doors, and more. Call 647-699-4607.">
+  <meta name="twitter:description" content="Local handyman for cabinet and drawer repair, punch lists, and more. Call 647-699-4607.">
   <meta name="twitter:image" content="https://readyfix.ca/img/og-image.jpg">
   <link rel="stylesheet" href="/css/main.css">
   <script defer src="/js/main.js"></script>
@@ -82,7 +82,8 @@
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle__bar"></span></button>
         <ul id="nav-menu">
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
+          <li><a href="/before-after/">Before &amp; After</a></li>
           <li><a href="#trust">Why ReadyFix</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -91,6 +92,14 @@
     </div>
   </header>
   <main id="main">
+    <section class="section-compact">
+      <div class="section-inner pill-row" aria-label="Key reasons to call ReadyFix">
+        <div class="pill"><strong>Same-week scheduling</strong><span>Priority slots for GTA homeowners</span></div>
+        <div class="pill"><strong>On-time arrival windows</strong><span>We confirm and text when en route</span></div>
+        <div class="pill"><strong>Call now</strong><a class="hero__link" data-track="cta:call" href="tel:6476994607">647-699-4607</a></div>
+      </div>
+    </section>
+
     <section class="hero" aria-labelledby="hero-title">
       <div class="section-inner hero__inner">
         <div class="hero__copy">
@@ -104,7 +113,7 @@
           <ul class="hero__stats" aria-label="Fast facts">
             <li><span>90+</span> Toronto homeowners helped this year</li>
             <li><span>&lt;24h</span> average response time</li>
-            <li><span>Licensed &amp; insured</span> for residential work</li>
+            <li><span>On-time arrivals</span> confirmed windows and updates</li>
           </ul>
         </div>
         <div class="hero__media">
@@ -117,7 +126,47 @@
       </div>
     </section>
 
-        <section class="service-grid" aria-labelledby="services-title">
+    <!-- Visual proof: concise reasons and before/after reels boost trust and conversions -->
+    <section class="proof" aria-labelledby="proof-title">
+      <div class="section-inner">
+        <p class="eyebrow">Real Repairs</p>
+        <h2 id="proof-title">Real Repairs. Real Results.</h2>
+        <div class="before-after-grid">
+          <article class="proof-card">
+            <div class="ba-slider" aria-label="Drywall patch before and after">
+              <img src="/images/before1.jpg" alt="Drywall damage before repair">
+              <img class="after" src="/images/after1.jpg" alt="Drywall repaired after service">
+              <input type="range" min="10" max="90" value="50" aria-label="Slide to view before and after">
+            </div>
+            <h3>Condo drywall patch</h3>
+            <p>Cut-out from plumbing access, patched, skimmed, and ready for paint in one visit.</p>
+            <a class="cta-inline" href="#contact">Need a similar repair? Text us a photo.</a>
+          </article>
+          <article class="proof-card">
+            <div class="ba-slider" aria-label="Cabinet alignment before and after">
+              <img src="/images/before2.jpg" alt="Cabinet door sagging before repair">
+              <img class="after" src="/images/after2.jpg" alt="Cabinet re-aligned after repair">
+              <input type="range" min="10" max="90" value="50" aria-label="Slide to view before and after">
+            </div>
+            <h3>Cabinet hinge tune-up</h3>
+            <p>Misaligned doors re-hung and soft-close hinges added without replacing the boxes.</p>
+            <a class="cta-inline" href="#contact">Need a similar repair? Text us a photo.</a>
+          </article>
+          <article class="proof-card">
+            <div class="ba-slider" aria-label="Trim repair before and after">
+              <img src="/images/before3.jpg" alt="Damaged trim before repair">
+              <img class="after" src="/images/after3.jpg" alt="Fresh trim after repair">
+              <input type="range" min="10" max="90" value="50" aria-label="Slide to view before and after">
+            </div>
+            <h3>Entry trim refresh</h3>
+            <p>Chipped casing replaced, caulked, and prepped for paint with minimal disruption.</p>
+            <a class="cta-inline" href="#contact">Need a similar repair? Text us a photo.</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-grid" aria-labelledby="services-title">
       <div class="section-inner">
         <div class="section-heading">
         <p class="eyebrow">Same-week availability</p>
@@ -154,6 +203,9 @@
           </div>
         </a></li>
       </ul>
+      <div class="section-heading" style="margin-top: 1.25rem;">
+        <a class="btn btn--ghost btn--small" href="/services/">View all services</a>
+      </div>
     </div>
       
     </section>
@@ -164,9 +216,9 @@
         <p class="eyebrow">Trusted locally</p>
         <h2 id="trust-title">Homeowners call us back because we keep promises</h2>
         <ul class="badges">
-          <li>Licensed &amp; insured</li>
-          <li>WSIB coverage</li>
-          <li>2-year workmanship warranty</li>
+          <li>On-time arrival windows</li>
+          <li>Clear, same-day communication</li>
+          <li>Photo updates &amp; tidy cleanup</li>
         </ul>
       </div>
         <div class="testimonials" aria-label="Testimonials">
@@ -254,7 +306,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -277,4 +329,5 @@
   </div>
 </body>
 </html>
+
 

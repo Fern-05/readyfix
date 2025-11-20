@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="utf-8">
@@ -32,7 +32,8 @@
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle__bar"></span></button>
         <ul id="nav-menu">
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
+          <li><a href="/before-after/">Before &amp; After</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
           <li><a href="/">Home</a></li>
         </ul>
@@ -46,7 +47,7 @@
       <div class="section-inner">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li aria-current="page">Lock replacement</li>
         </ol>
       </div>
@@ -79,10 +80,40 @@
           <h2>Why ReadyFix</h2>
           <p>We protect finishes, drill accurately, and test every function. We can coordinate with your locksmith for re-keying if needed.</p>
           <ul class="badges">
-            <li>Licensed &amp; insured</li>
+            <li>On-time arrival windows</li>
             <li>Clean work zones</li>
-            <li>2-year workmanship warranty</li>
+            <li>Photo updates &amp; tidy cleanup</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-gallery" aria-labelledby="locks-gallery">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="locks-gallery">Lock replacements</h2>
+          <p>Clean hardware swaps with smooth, secure latching.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="/images/locks1.jpg" alt="Old lockset before replacement">
+            <h3>Front entry upgrade</h3>
+            <p>Replaced a worn lever and deadbolt, aligned the strike, and ensured a tight, clean close.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/locks2.jpg" alt="Smart lock installation in progress">
+            <h3>Smart lock install</h3>
+            <p>Installed a smart deadbolt, adjusted the latch depth, and tested app connectivity with the owner.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/locks3.jpg" alt="Interior door latch before adjustment">
+            <h3>Latch alignment</h3>
+            <p>Repositioned a strike plate and hinges so an interior door latches quietly without force.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
         </div>
       </div>
     </section>
@@ -169,7 +200,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
         </ul>
       </div>
@@ -191,3 +222,4 @@
   </div>
 </body>
 </html>
+

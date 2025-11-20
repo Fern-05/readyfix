@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="utf-8">
@@ -32,7 +32,8 @@
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle__bar"></span></button>
         <ul id="nav-menu">
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
+          <li><a href="/before-after/">Before &amp; After</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
           <li><a href="/">Home</a></li>
         </ul>
@@ -46,7 +47,7 @@
       <div class="section-inner">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li aria-current="page">Mount artwork or TV</li>
         </ol>
       </div>
@@ -79,10 +80,40 @@
           <h2>Why ReadyFix</h2>
           <p>We confirm wall type, weight ratings, and clearances before drilling. Expect level installs and clean patching if adjustments are needed.</p>
           <ul class="badges">
-            <li>Licensed &amp; insured</li>
+            <li>On-time arrival windows</li>
             <li>Condo-friendly dust control</li>
-            <li>2-year workmanship warranty</li>
+            <li>Photo updates &amp; tidy cleanup</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-gallery" aria-labelledby="mount-gallery">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="mount-gallery">Mounting results</h2>
+          <p>Secure, level installs with clean wire management.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="/images/mount1.jpg" alt="TV wall before mounting">
+            <h3>Condo TV mount</h3>
+            <p>Located studs in a condo wall, mounted a 65” TV, and added cord cover for a clean finish.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/mount2.jpg" alt="Gallery wall layout before installation">
+            <h3>Gallery wall layout</h3>
+            <p>Planned and hung a 9-piece gallery wall with consistent spacing and anchors for each frame.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/mount3.jpg" alt="Heavy mirror before installation">
+            <h3>Heavy mirror install</h3>
+            <p>Anchored into masonry with proper hardware to secure a large entry mirror safely.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
         </div>
       </div>
     </section>
@@ -96,7 +127,7 @@
         </details>
         <details>
           <summary>Can you hide the wires?</summary>
-          <p>We offer cord covers or, where feasible, in-wall routing using code-compliant methods. We’ll confirm options on site.</p>
+          <p>We offer cord covers or, where feasible, in-wall routing using code-compliant methods. Weâ€™ll confirm options on site.</p>
         </details>
         <details>
           <summary>Is condo work okay?</summary>
@@ -169,7 +200,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
         </ul>
       </div>
@@ -191,3 +222,4 @@
   </div>
 </body>
 </html>
+

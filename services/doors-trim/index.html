@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="utf-8">
@@ -32,7 +32,8 @@
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle__bar"></span></button>
         <ul id="nav-menu">
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
+          <li><a href="/before-after/">Before &amp; After</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
           <li><a href="/">Home</a></li>
         </ul>
@@ -46,7 +47,7 @@
       <div class="section-inner">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li aria-current="page">Doors &amp; trim</li>
         </ol>
       </div>
@@ -79,10 +80,40 @@
           <h2>Why ReadyFix</h2>
           <p>We protect floors, match profiles where possible, and keep dust contained. Expect crisp miters, smooth closes, and tidy caulking.</p>
           <ul class="badges">
-            <li>Licensed &amp; insured</li>
+            <li>On-time arrival windows</li>
             <li>Finish carpentry focused</li>
-            <li>2-year workmanship warranty</li>
+            <li>Photo updates &amp; tidy cleanup</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-gallery" aria-labelledby="doors-gallery">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="doors-gallery">Doors &amp; trim results</h2>
+          <p>Proof of smoother doors, crisp casing, and refreshed baseboards.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="/images/doors1.jpg" alt="Door rubbing before adjustment">
+            <h3>Sticky door tune</h3>
+            <p>Planed and shimmed a rubbing door, realigned hinges, and reset the strike for a quiet close.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/doors2.jpg" alt="Damaged casing before replacement">
+            <h3>Casing refresh</h3>
+            <p>Damaged casing replaced and caulked; seams filled and sanded ready for paint.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
+          <article class="gallery-card">
+            <img src="/images/doors3.jpg" alt="Gapped baseboard before fix">
+            <h3>Baseboard repair</h3>
+            <p>Closed gaps, added returns, and renewed caulk lines for a polished look.</p>
+            <a class="btn btn--ghost btn--small" href="#contact">Send us your project photo</a>
+          </article>
         </div>
       </div>
     </section>
@@ -92,7 +123,7 @@
         <h2 id="doors-faq">Doors &amp; trim FAQs</h2>
         <details open>
           <summary>Can you match existing trim profiles?</summary>
-          <p>We stock common profiles and can source close matches. We’ll discuss options if an exact match isn’t available.</p>
+          <p>We stock common profiles and can source close matches. Weâ€™ll discuss options if an exact match isnâ€™t available.</p>
         </details>
         <details>
           <summary>Do you replace door hardware?</summary>
@@ -169,7 +200,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li><a href="/services/" aria-label="Services">Services</a></li>
           <li><a href="/services/drywall-repair-toronto/">Drywall repair</a></li>
         </ul>
       </div>
@@ -191,3 +222,4 @@
   </div>
 </body>
 </html>
+

@@ -62,4 +62,12 @@
     toggleMobileCta();
     window.addEventListener('scroll', toggleMobileCta, { passive: true });
   }
+
+  // Before/after sliders: keep simple, lightweight interaction for visual proof
+  document.querySelectorAll('.ba-slider input[type="range"]').forEach((slider) => {
+    const wrapper = slider.closest('.ba-slider');
+    const setPos = (value) => wrapper.style.setProperty('--ba-pos', `${value}%`);
+    setPos(slider.value);
+    slider.addEventListener('input', (e) => setPos(e.target.value));
+  });
 })();
