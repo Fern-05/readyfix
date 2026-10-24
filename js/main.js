@@ -63,6 +63,19 @@
     window.addEventListener('scroll', toggleMobileCta, { passive: true });
   }
 
+  // Hide project photos that fail to load (e.g. not uploaded yet) instead of showing broken icons
+  const hideMissing = (img) => {
+    const target = img.closest('.ba-slider') || img;
+    target.classList.add('is-missing');
+  };
+  document.querySelectorAll('main img').forEach((img) => {
+    if (img.complete && img.naturalWidth === 0) {
+      hideMissing(img);
+    } else {
+      img.addEventListener('error', () => hideMissing(img), { once: true });
+    }
+  });
+
   // Before/after sliders: keep simple, lightweight interaction for visual proof
   document.querySelectorAll('.ba-slider input[type="range"]').forEach((slider) => {
     const wrapper = slider.closest('.ba-slider');

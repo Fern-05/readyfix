@@ -1,0 +1,24 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/drywall-repair-toronto.html", "destination": "/services/drywall-repair-toronto/", "permanent": true },
+    { "source": "/drywall-repair-toronto", "destination": "/services/drywall-repair-toronto/", "permanent": true },
+    { "source": "/drywall-repair-toronto/", "destination": "/services/drywall-repair-toronto/", "permanent": true },
+    { "source": "/services/:slug/index.html", "destination": "/services/:slug/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(css|js|img)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
