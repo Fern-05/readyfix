@@ -1727,3 +1727,102 @@ ol {
 .card h3 a:hover {
   color: var(--red-dark);
 }
+
+/* ---------------------------------------------------------------- job photos */
+
+.photo-grid,
+.ba-pair-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ba-pair-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.photo-card {
+  margin: 0;
+}
+
+.photo-card img,
+.ba-pair img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--bg-warm);
+}
+
+.photo-card figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.photo-card figcaption strong {
+  display: block;
+  color: var(--ink);
+}
+
+.ba-pair {
+  padding: 1rem 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+  background: #fff;
+}
+
+.section--alt .ba-pair {
+  border-color: transparent;
+  box-shadow: var(--shadow);
+}
+
+.ba-pair__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.ba-pair figure {
+  position: relative;
+  margin: 0;
+}
+
+.ba-pair figcaption {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(18, 20, 23, 0.8);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.ba-pair figure:last-child figcaption {
+  background: var(--red);
+}
+
+.ba-pair h3 {
+  margin-bottom: 0.35rem;
+}
+
+.ba-pair p {
+  margin: 0;
+  color: var(--muted);
+}

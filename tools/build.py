@@ -332,7 +332,59 @@ def p_contact(page, heading="Get a free quote", intro="Tell us what needs fixing
   </section>"""
 
 
+def work_img(name, alt, pos="center", sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"):
+    """A job photo from img/work/ (made by tools/optimize_images.py with widths 400,800)."""
+    src = lambda ext: f"/img/work/{name}-400.{ext} 400w, /img/work/{name}-800.{ext} 800w"
+    return (f'<picture><source type="image/webp" srcset="{src("webp")}" sizes="{sizes}">'
+            f'<img src="/img/work/{name}-800.jpg" srcset="{src("jpg")}" sizes="{sizes}" alt="{esc(alt)}" '
+            f'style="object-position:{pos}" loading="lazy" decoding="async"></picture>')
+
+
+def section_head(eyebrow, heading, intro, hid):
+    intro_html = f"<p>{intro}</p>" if intro else ""
+    return (f'<div class="section-head"><p class="eyebrow">{eyebrow}</p>'
+            f'<h2 id="{hid}">{heading}</h2>{intro_html}</div>')
+
+
+def p_before_after(page, items, heading="Before &amp; after", intro="", eyebrow="Real jobs", alt=False, more=False):
+    """items: [{"before", "after", "title", "text", "alt_before", "alt_after", "pos_before", "pos_after"}]"""
+    cards = "".join(
+        f"""<article class="ba-pair">
+          <div class="ba-pair__photos">
+            <figure>{work_img(i["before"], i["alt_before"], i.get("pos_before", "center"), "(min-width: 1024px) 280px, 50vw")}<figcaption>Before</figcaption></figure>
+            <figure>{work_img(i["after"], i["alt_after"], i.get("pos_after", "center"), "(min-width: 1024px) 280px, 50vw")}<figcaption>After</figcaption></figure>
+          </div>
+          <h3>{i["title"]}</h3>
+          <p>{i["text"]}</p>
+        </article>""" for i in items)
+    more_html = (f'<p class="section-foot"><a class="text-link" href="/before-after/">See more of our work {icon("arrow")}</a></p>'
+                 if more else "")
+    return f"""<section class="section{' section--alt' if alt else ''}" aria-labelledby="ba-title">
+    <div class="container">
+      {section_head(eyebrow, heading, intro, "ba-title")}
+      <div class="ba-pair-grid">{cards}</div>{more_html}
+    </div>
+  </section>"""
+
+
+def p_gallery(page, items, heading="Recent work", intro="", eyebrow="Our work", alt=False, more=False, hid="gallery-title"):
+    """items: [{"img", "alt", "title", "text", "pos"}]"""
+    tiles = "".join(
+        f"""<figure class="photo-card">{work_img(i["img"], i["alt"], i.get("pos", "center"))}
+          <figcaption><strong>{i["title"]}</strong>{(" " + i["text"]) if i.get("text") else ""}</figcaption>
+        </figure>""" for i in items)
+    more_html = (f'<p class="section-foot"><a class="text-link" href="/before-after/">See more of our work {icon("arrow")}</a></p>'
+                 if more else "")
+    return f"""<section class="section{' section--alt' if alt else ''}" aria-labelledby="{hid}">
+    <div class="container">
+      {section_head(eyebrow, heading, intro, hid)}
+      <div class="photo-grid">{tiles}</div>{more_html}
+    </div>
+  </section>"""
+
+
 PARTIALS = {
+    "before_after": p_before_after, "gallery": p_gallery,
     "page_hero": p_page_hero, "trust_bar": p_trust_bar, "services_grid": p_services_grid,
     "related_services": p_related_services, "areas": p_areas, "testimonials": p_testimonials,
     "process": p_process, "cta": p_cta, "contact": p_contact,
